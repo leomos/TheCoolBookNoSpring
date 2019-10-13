@@ -52,5 +52,5 @@ public class Author implements Serializable {
 	public void addBook(Book book) {
 		this.books.add(book);
 	}
-	
+
 }
