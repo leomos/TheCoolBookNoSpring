@@ -32,6 +32,10 @@ public class Database {
 		Author auth2 = new Author("Ken", "Follet", new Date(49, 5, 5));
 		Author auth3 = new Author("Stephen", "King", new Date(49, 5, 5));
 		
+		this.addAuthor(auth1);
+		this.addAuthor(auth2);
+		this.addAuthor(auth3);
+		
 		List<Author> Auth1 = new ArrayList<>();
 		List<Author> Auth2 = new ArrayList<>();
 		List<Author> Auth3 = new ArrayList<>();
@@ -47,10 +51,6 @@ public class Database {
 		auth1.addBook(book1);
 		auth2.addBook(book2);
 		auth3.addBook(book3);
-
-		this.authors.add(auth1);
-		this.authors.add(auth2);
-		this.authors.add(auth3);
 		
 		this.books.add(book1);
 		this.books.add(book2);
