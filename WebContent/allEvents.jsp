@@ -51,7 +51,7 @@
                 		Event currentEvent = events.get(i);
                 		out.println("<tr>");
                 		out.println("<td>" + currentEvent.getName() + "</td>");
-                		out.println("<td>" + currentEvent.getBook() + "</td>");
+                		out.println("<td>" + currentEvent.getBook().getTitle() + "</td>");
                 		out.println("<td>" + String.format("%tY-%tm-%td", currentEvent.getDate(), currentEvent.getDate(), currentEvent.getDate()) + "</td>");
                 		out.println("<td>" + currentEvent.getPlace() + "</td>");
                 		out.println("</tr>");
