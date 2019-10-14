@@ -46,7 +46,6 @@
                 <tbody>
                 	<%
                 	List<Author> authors = db.getAuthors();
-                	DateFormat dt = new SimpleDateFormat("dd-mm-yyyyy");
                 	for(int i = 0; i < authors.size(); i++) {
                 		Author currentAuthor = authors.get(i);
                 		out.println("<tr>");

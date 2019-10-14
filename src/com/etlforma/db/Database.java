@@ -18,6 +18,7 @@ public class Database {
 		this.authors = new ArrayList<>();
 		this.authors.add(new Author("George", "Orwell", new Date(3, 5, 25)));
 		this.authors.add(new Author("Ken", "Follet", new Date(49, 5, 5)));
+		this.authors.add(new Author("Stephen", "King", new Date(49, 5, 5)));
 	}
 	
 	public List<Author> getAuthors() {
