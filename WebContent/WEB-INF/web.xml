@@ -14,9 +14,33 @@
 		<servlet-name>AllAuthorsServlet</servlet-name>
 		<jsp-file>/allAuthors.jsp</jsp-file>
 	</servlet>
+	<servlet>
+		<servlet-name>AllBooksServlet</servlet-name>
+		<jsp-file>/allBooks.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>AllEventsServlet</servlet-name>
+		<jsp-file>/allEvents.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>AuthorServlet</servlet-name>
+		<jsp-file>/author.jsp</jsp-file>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>AllAuthorsServlet</servlet-name>
 		<url-pattern>/allAuthors.jsp</url-pattern>   
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AllBooksServlet</servlet-name>
+		<url-pattern>/allBooks.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AllEventsServlet</servlet-name>
+		<url-pattern>/allEvents.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AuthorServlet</servlet-name>
+		<url-pattern>/author.jsp</url-pattern>
 	</servlet-mapping>
 </web-app>
