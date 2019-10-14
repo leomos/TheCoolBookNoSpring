@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
 	
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/loginForm.jsp").forward(request, response);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
             Optional<User> user = db.findUser(username, password);
 
             if (user.isPresent()) {
-                request.getSession(true).setAttribute("user", user.get());
+                request.getSession(true).setAttribute("username", user.get());
                 response.sendRedirect(request.getContextPath());
                 return;
             } else {
@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
         }
 
         request.setAttribute("messages", messages);
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/loginForm.jsp").forward(request, response);
     }
 
 }
