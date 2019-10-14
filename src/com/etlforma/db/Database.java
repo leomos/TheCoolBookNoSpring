@@ -9,11 +9,11 @@ import com.etlforma.model.Book;
 import com.etlforma.model.Event;
 
 public class Database {
-	
+
 	private List<Author> authors;
 	private List<Book> books;
 	private List<Event> events;
-	
+
 	public Database() {
 		this.authors = new ArrayList<>();
 		this.books = new ArrayList<>();
@@ -54,18 +54,19 @@ public class Database {
 		this.events.add(event1);
 		this.events.add(event2);
 		this.events.add(event3);
+		this.books.add(new Book("Il piccolo principe", 204,this.authors, "1225425"));
 	}
-	
+
 	public List<Author> getAuthors() {
 		return this.authors;
 	}
 
 	public List<Book> getBooks() {
-		return books;
+		return this.books;
 	}
 
 	public List<Event> getEvents() {
 		return events;
 	}
-	
+
 }
