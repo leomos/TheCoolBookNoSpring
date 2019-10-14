@@ -23,6 +23,7 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
+                
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="/TheCoolBook/allAuthors.jsp">Authors</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/TheCoolBook/allBooks.jsp">Books</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/TheCoolBook/allEvents.jsp">Events</a></li>
@@ -38,6 +39,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                    <th>Id</th>
                         <th>Name</th>
                         <th>Surname</th>
                         <th>Birthday</th>
@@ -49,6 +51,7 @@
                 	for(int i = 0; i < authors.size(); i++) {
                 		Author currentAuthor = authors.get(i);
                 		out.println("<tr>");
+                		out.println("<td><a href=\"/TheCoolBook/author.jsp?id="+currentAuthor.getId()+"\">" + currentAuthor.getId() +  "</a></td>");
                 		out.println("<td>" + currentAuthor.getFirstName() + "</td>");
                 		out.println("<td>" + currentAuthor.getLastName() + "</td>");
                 		out.println("<td>" + String.format("%tY-%tm-%td", currentAuthor.getBirthday(), currentAuthor.getBirthday(), currentAuthor.getBirthday()) + "</td>");

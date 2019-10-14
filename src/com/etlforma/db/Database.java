@@ -14,6 +14,15 @@ public class Database {
 	private List<Book> books;
 	private List<Event> events;
 
+	private Integer id=0;
+
+	public void addAuthor(Author a) {
+		this.authors.add(a);
+		a.setId(id);
+		id = id+1;
+	}
+	
+
 	public Database() {
 		this.authors = new ArrayList<>();
 		this.books = new ArrayList<>();
@@ -56,7 +65,7 @@ public class Database {
 		this.events.add(event3);
 		this.books.add(new Book("Il piccolo principe", 204,this.authors, "1225425"));
 	}
-
+  
 	public List<Author> getAuthors() {
 		return this.authors;
 	}
