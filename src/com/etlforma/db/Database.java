@@ -13,13 +13,21 @@ public class Database {
 	private List<Author> authors;
 	private List<Book> books;
 	private List<Event> events;
+	private Integer id=0;
 	
 	public Database() {
 		this.authors = new ArrayList<>();
-		this.authors.add(new Author("George", "Orwell", new Date(3, 5, 25)));
-		this.authors.add(new Author("Ken", "Follet", new Date(49, 5, 5)));
-		this.authors.add(new Author("Stephen", "King", new Date(49, 5, 5)));
+		this.addAuthor(new Author("George", "Orwell", new Date(3, 5, 25)));
+		this.addAuthor(new Author("Ken", "Follet", new Date(49, 5, 5)));
+		this.addAuthor(new Author("Stephen", "King", new Date(49, 5, 5)));
 	}
+
+	public void addAuthor(Author a) {
+		this.authors.add(a);
+		a.setId(id);
+		id = id+1;
+	}
+	
 	
 	public List<Author> getAuthors() {
 		return this.authors;
