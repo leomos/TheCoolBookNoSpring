@@ -19,6 +19,11 @@ public class Database {
 		this.authors.add(new Author("George", "Orwell", new Date(3, 5, 25)));
 		this.authors.add(new Author("Ken", "Follet", new Date(49, 5, 5)));
 		this.authors.add(new Author("Stephen", "King", new Date(49, 5, 5)));
+		this.books = new ArrayList<Book>();
+		this.books.add(new Book("Il piccolo principe", 204,this.authors, "1225425"));
+
+		
+		
 	}
 
 	public List<Author> getAuthors() {
@@ -26,7 +31,7 @@ public class Database {
 	}
 
 	public List<Book> getBooks() {
-		return books;
+		return this.books;
 	}
 
 	public List<Event> getEvents() {
