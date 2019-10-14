@@ -1,6 +1,4 @@
-build/classes/*
-!.keep
-.settings/org.eclipse.wst.ws.service.policy.prefs
+build/
 .classpath
 .project
 .settings/
