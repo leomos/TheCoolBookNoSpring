@@ -3,16 +3,19 @@ package com.etlforma.db;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import com.etlforma.model.Author;
 import com.etlforma.model.Book;
 import com.etlforma.model.Event;
+import com.etlforma.model.User;
 
 public class Database {
 
 	private List<Author> authors;
 	private List<Book> books;
 	private List<Event> events;
+	private List<User> users;
 
 	private Integer id=0;
 
@@ -64,6 +67,9 @@ public class Database {
 		this.events.add(event2);
 		this.events.add(event3);
 		this.books.add(new Book("Il piccolo principe", 204,this.authors, "1225425"));
+		
+		this.users = new ArrayList<>();
+		this.users.add(new User("admin", "admin"));
 	}
   
 	public List<Author> getAuthors() {
@@ -76,6 +82,17 @@ public class Database {
 
 	public List<Event> getEvents() {
 		return events;
+	}
+	
+	public Optional<User> findUser(String username, String password) {
+		for(int i = 0; i < this.users.size(); i++) {
+			User currentUser = this.users.get(i);
+			if(currentUser.getUsername().equals(username) && currentUser.getPassword().contentEquals(password)) {
+				return Optional.of(currentUser);
+			}
+		}
+		
+		return Optional.empty();
 	}
 
 }
