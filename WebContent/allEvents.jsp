@@ -34,7 +34,7 @@
 					<li class="nav-item" role="presentation"><a class="nav-link"
 						href="/TheCoolBook/allBooks.jsp">Books</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="/TheCoolBook/allEvents.jsp">Events</a></li>
+						href="/TheCoolBook/allEvents">Events</a></li>
 				</ul>
 			</div>
 		</div>

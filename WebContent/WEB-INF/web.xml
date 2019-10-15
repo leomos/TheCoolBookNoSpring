@@ -18,18 +18,20 @@
 		<jsp-file>/allAuthors.jsp</jsp-file>
 	</servlet>
 
-	<servlet>
-		<servlet-name>AllEventsServlet</servlet-name>
-		<jsp-file>/com.etlforma.servlet/allEvents.java</jsp-file>
-	</servlet>
+
 
 	<servlet-mapping>
 		<servlet-name>AllAuthorsServlet</servlet-name>
 		<url-pattern>/allAuthors.jsp</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>AllEventsServlet</servlet-name>
+		<servlet-class>/com.etlforma.allEvents</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>AllEventsServlet</servlet-name>
-		<url-pattern>/com.etlforma.servlet/allEvents.java</url-pattern>
+		<url-pattern>/events.jsp</url-pattern>
 	</servlet-mapping>
 </web-app>
