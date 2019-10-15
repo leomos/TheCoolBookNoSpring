@@ -5,7 +5,7 @@
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="com.etlforma.db.Database"%>
 <%@ page import="com.etlforma.model.Event"%>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- <%@ import="/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"%> 
  --%>
 
@@ -61,12 +61,6 @@
 				</thead>
 				<tbody>
 
-
-
-
-
-
-
 					<%
 						List<Event> events = (List<Event>) request.getAttribute("events");
 						/* 	for (int i = 0; i < events.size(); i++) {
@@ -87,13 +81,12 @@
 								</c:out></td>
 							<td><c:out value="${event.getBook().getTitle()}">
 								</c:out></td>
-					<td><c:out value="${event.getDate()}">
-							</c:out></td> 
+							<td><c:out value="${event.getDate()}">
+								</c:out></td>
 							<td><c:out value="${event.getPlace()}">
-							</c:out></td>
-							</tr>
+								</c:out></td>
+						</tr>
 					</c:forEach>
-
 
 				</tbody>
 			</table>
