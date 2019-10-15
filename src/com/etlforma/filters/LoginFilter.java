@@ -43,10 +43,14 @@ public class LoginFilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		HttpSession session = req.getSession(false);
 		
+		if(req.getRequestURI().startsWith(req.getContextPath() + "/assets")) {
+			chain.doFilter(request, response);
+			return;
+		}
+		
 		String loginURI = req.getContextPath() + "/login";
         boolean loggedIn = session != null && session.getAttribute("username") != null;
         boolean loginRequest = req.getRequestURI().equals(loginURI);
-        boolean assetsRequest = req.getRequestURI().startsWith(req.getContextPath() + "/assets");
         if (loggedIn || loginRequest) {
             chain.doFilter(request, response);
         } else {
