@@ -51,7 +51,7 @@
                 	for(int i = 0; i < authors.size(); i++) {
                 		Author currentAuthor = authors.get(i);
                 		out.println("<tr>");
-                		out.println("<td><a href=\"/TheCoolBook/author.jsp?id="+currentAuthor.getId()+"\">" + currentAuthor.getId() +  "</a></td>");
+                		out.println("<td><a href=\"/TheCoolBook/author?id="+currentAuthor.getId()+"\">" + currentAuthor.getId() +  "</a></td>");
                 		out.println("<td>" + currentAuthor.getFirstName() + "</td>");
                 		out.println("<td>" + currentAuthor.getLastName() + "</td>");
                 		out.println("<td>" + String.format("%tY-%tm-%td", currentAuthor.getBirthday(), currentAuthor.getBirthday(), currentAuthor.getBirthday()) + "</td>");

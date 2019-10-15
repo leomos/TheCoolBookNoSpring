@@ -3,9 +3,9 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.DateFormat" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="com.etlforma.db.Database" %>
+<%-- <%@ page import="com.etlforma.db.Database" %> --%>
 <%@ page import="com.etlforma.model.Author" %>
-<%! Database db = new Database(); %>
+<%-- <%! Database db = new Database(); %> --%>
 <!DOCTYPE html>
 <html>
 
@@ -47,9 +47,9 @@
                 </thead>
                 <tbody>
                 	<%
-                	List<Author> authors = db.getAuthors();
+                	Author a = (Author)request.getAttribute("author");
                 	
-                	Author a=authors.get(Integer.parseInt(request.getParameter("id")));
+      
                 	
                 	out.println("<tr>");
             		out.println("<td>" + a.getFirstName() + "</td>");

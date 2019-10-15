@@ -38,7 +38,10 @@
 		<servlet-name>AuthorsServlet</servlet-name>
 		<servlet-class>com.etlforma.servlets.AuthorsServlet</servlet-class>
 	</servlet>
-	
+	<servlet>
+		<servlet-name>NewAuthorServlet</servlet-name>
+		<servlet-class>com.etlforma.servlets.NewAuthorServlet</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>AllAuthorsServlet</servlet-name>
@@ -67,6 +70,10 @@
 	<servlet-mapping>
 		<servlet-name>AuthorsServlet</servlet-name>
 		<url-pattern>/authors</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewAuthorServlet</servlet-name>
+		<url-pattern>/author</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
