@@ -5,7 +5,9 @@
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="com.etlforma.db.Database"%>
 <%@ page import="com.etlforma.model.Event"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%-- <%@ import="/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"%> 
+ --%>
 
 <%!Database db = new Database();%>
 <!DOCTYPE html>
@@ -18,6 +20,8 @@
 <title>All events - TheCoolBook</title>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/styles.css">
+
+
 </head>
 
 <body>
@@ -56,19 +60,41 @@
 					</tr>
 				</thead>
 				<tbody>
+
+
+
+
+
+
+
 					<%
 						List<Event> events = (List<Event>) request.getAttribute("events");
-						for (int i = 0; i < events.size(); i++) {
-							Event currentEvent = events.get(i);
-							out.println("<tr>");
-							out.println("<td>" + currentEvent.getName() + "</td>");
-							out.println("<td>" + currentEvent.getBook().getTitle() + "</td>");
-							out.println("<td>" + String.format("%tY-%tm-%td", currentEvent.getDate(), currentEvent.getDate(),
-									currentEvent.getDate()) + "</td>");
-							out.println("<td>" + currentEvent.getPlace() + "</td>");
-							out.println("</tr>");
-						}
+						/* 	for (int i = 0; i < events.size(); i++) {
+								Event currentEvent = events.get(i);
+								out.println("<tr>");
+								out.println("<td>" + currentEvent.getName() + "</td>");
+								out.println("<td>" + currentEvent.getBook().getTitle() + "</td>");
+								out.println("<td>" + String.format("%tY-%tm-%td", currentEvent.getDate(), currentEvent.getDate(),
+										currentEvent.getDate()) + "</td>");
+								out.println("<td>" + currentEvent.getPlace() + "</td>");
+								out.println("</tr>");
+							} */
 					%>
+
+					<c:forEach items="${events}" var="event">
+						<tr>
+							<td><c:out value="${event.getName()}">
+								</c:out></td>
+							<td><c:out value="${event.getBook().getTitle()}">
+								</c:out></td>
+					<td><c:out value="${event.getDate()}">
+							</c:out></td> 
+							<td><c:out value="${event.getPlace()}">
+							</c:out></td>
+							</tr>
+					</c:forEach>
+
+
 				</tbody>
 			</table>
 		</div>
