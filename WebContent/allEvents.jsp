@@ -5,6 +5,8 @@
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="com.etlforma.db.Database"%>
 <%@ page import="com.etlforma.model.Event"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <%!Database db = new Database();%>
 <!DOCTYPE html>
 <html>
